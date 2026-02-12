@@ -4,7 +4,7 @@ This repository contains my hands-on Linux and AWS Cloud Computing Projects for 
 
 ## 👩‍💻 About Me
 
-I am a Diploma student in Cloud Computing with skills in Linux , AWS and Shell Scripting . I am actively building real-world projects to prepare for Cloud Support / DevOps roles.
+I am a Diploma graduate in Cloud Computing with hands-on experience in Linux, AWS, and Shell Scripting. I build real-world cloud projects to prepare for Cloud Support and DevOps Engineer roles.
 
 ## Projects
 
