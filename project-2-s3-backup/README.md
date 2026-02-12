@@ -6,16 +6,19 @@ Automate Linux folder backup to AWS S3 using Shell Script and Cron.
 ## 🧰 Services Used
 - AWS EC2
 - AWS S3
+- AWS IAM
 - AWS CLI
 - Cron
-- Bash Scripting
+- Shell Scripting
 
 ## ⚙️ Steps Performed
 1. Created S3 bucket
-2. Installed AWS CLI
-3. Created backup script
-4. Uploaded backup to S3
-5. Automated using Cron
+2. Created an IAM user
+3. Created an Access Keys
+4. Installed AWS CLI
+5. Created backup script
+6. Uploaded backup to S3
+7. Automated using Cron
 
 ## 💻 Script Used
 ```bash
@@ -32,5 +35,5 @@ aws s3 cp $DEST $BUCKET
 
 ![Script](Screenshot 2026-02-13 001234.png)
 ![S3 Upload](Screenshot 2026-02-13 001512.png) and (Screenshot 2026-02-13 000642.png)
-![Cron Job](screenshots/cron.png)
+![Cron Job](RHEL2-2026-02-12-23-54-31.png)
 
