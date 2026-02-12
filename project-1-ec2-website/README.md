@@ -36,7 +36,7 @@ sudo systemctl enable nginx
 ![Nginx](Screenshot 2026-02-12 204053.png)
 
 ### Website Output
-![Website](screenshots/website.png)
+![Website](Screenshot 2026-02-12 204800.png)
 
 
 
