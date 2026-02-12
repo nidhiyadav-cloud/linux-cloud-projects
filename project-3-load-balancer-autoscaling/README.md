@@ -24,7 +24,7 @@ Max:3
 ![ASG Config](Screenshot 2026-02-13 014438.png)
 
 ### EC2 Instances Running
-![EC2 Instances](screenshots/ec2-instances-running.png)
+![EC2 Instances](Screenshot 2026-02-13 011237.png)
 
 ### Target Group Healthy
 ![Target Group](screenshots/target-group-healthy.png)
