@@ -30,7 +30,7 @@ aws s3 cp $DEST $BUCKET
 
 ## 📸 Screenshots
 
-![Script](screenshots/script.png)
+![Script](Screenshot 2026-02-13 001234.png)
 ![S3 Upload](screenshots/s3.png)
 ![Cron Job](screenshots/cron.png)
 
