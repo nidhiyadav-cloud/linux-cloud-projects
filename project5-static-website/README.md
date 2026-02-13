@@ -68,7 +68,7 @@ Static Website Files (index.html)
 - Accessed website using CloudFront URL
 
 📸 Screenshot:
-![Final Website
+![Final Website(Screenshot 2026-02-13 230656.png)
 
 ---
 
