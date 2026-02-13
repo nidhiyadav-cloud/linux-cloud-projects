@@ -9,7 +9,7 @@ Automatically monitor EC2 CPU usage and send email alerts if CPU exceeds thresho
 - SNS (Notifications)
 - Default VPC
 
-## Architecture Diagram
+## 🏗️ Architecture Diagram
 ![Architecture](architecture-diagram.png)
 
 ┌─────────────┐
