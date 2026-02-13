@@ -50,7 +50,8 @@ Static Website Files (index.html)
 - Allowed public read access
 
 📸 Screenshot:
-![Bucket Policy](screenshots/3-bucket-policy.png)
+![Bucket Policy](Screenshot 2026-02-13 225802.png
+)
 
 ---
 
