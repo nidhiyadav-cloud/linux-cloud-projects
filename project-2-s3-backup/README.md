@@ -20,6 +20,21 @@ Automate Linux folder backup to AWS S3 using Shell Script and Cron.
 6. Uploaded backup to S3
 7. Automated using Cron
 
+## 🏗 Architecture
+
+┌─────────────────────────────┐
+│       Linux EC2             │
+│ src: /home/ec2-user/backup/data │
+│ backup.sh script            │
+└─────────────┬───────────────┘
+              │ Cron Job (Daily)
+              ▼
+┌─────────────────────────────┐
+│ Compressed Backup File      │
+│ dest: /tmp/data-YYYYMMDD-HHMMSS.tar.gz │
+└─────────────────────────────┘
+
+
 ## 💻 Script Used
 ```bash
 #!/bin/bash
