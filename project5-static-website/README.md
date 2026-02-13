@@ -33,7 +33,7 @@ Static Website Files (index.html)
 - Uploaded index.html
 
 📸 Screenshot:
-![S3 Bucket](screenshots/1-s3-bucket.png)
+![S3 Bucket](Screenshot 2026-02-13 231057.png)
 
 ---
 
@@ -68,7 +68,7 @@ Static Website Files (index.html)
 - Accessed website using CloudFront URL
 
 📸 Screenshot:
-![Final Website(Screenshot 2026-02-13 230656.png)
+![Final Website](Screenshot 2026-02-13 230656.png)
 
 ---
 
