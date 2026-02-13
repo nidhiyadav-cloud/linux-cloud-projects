@@ -69,7 +69,7 @@ Automatically monitor EC2 CPU usage and send email alerts if CPU exceeds thresho
 ![CloudWatch Alarm]()
 
 2. **SNS Topic Confirmation**
-![SNS Topic]()
+![SNS Topic](Screenshot 2026-02-13 220740.png)
 
 3. **Stress Test Running on EC2**
 ![Stress Test]()
