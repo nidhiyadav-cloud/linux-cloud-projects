@@ -9,6 +9,7 @@ To create a custom VPC with public and private subnets and deploy EC2 instances 
 - VPC
 - Subnets
 - Internet Gateway
+- NAT Gateway
 - Route Tables
 - EC2
 - Security Groups
@@ -17,18 +18,39 @@ To create a custom VPC with public and private subnets and deploy EC2 instances 
 
 ## 🏗️ Architecture Diagram
 
-              Internet
-                  ↓
-           Internet Gateway
-                  ↓
-             Custom VPC
-        -----------------------
-        |                     |
-   Public Subnet        Private Subnet
-   (10.0.1.0/24)        (10.0.2.0/24)
-        |                     |
-   EC2 Web Server        EC2 App Server
-   (65.0.132.248)           (10.0.2.87)
+                           Internet
+                              │
+                     ┌────────▼────────┐
+                     │ Internet Gateway │
+                     └────────┬────────┘
+                              │
+                      ┌───────▼────────┐
+                      │   Custom VPC    │
+                      │  10.0.0.0/16    │
+                      └────────┬────────┘
+            ───────────────────┼───────────────────
+                               │
+                 ┌─────────────▼─────────────┐
+                 │        Public Subnet       │
+                 │       10.0.1.0/24          │
+                 │                             │
+                 │  Bastion Host (EC2)        │
+                 │  + Public IP               │
+                 │                             │
+                 │  NAT Gateway               │
+                 └─────────────┬─────────────┘
+                               │
+                               │ (Private Route: 0.0.0.0/0 → NAT)
+                 ┌─────────────▼─────────────┐
+                 │        Private Subnet      │
+                 │       10.0.2.0/24          │
+                 │                             │
+                 │  Private EC2 Instance      │
+                 │  (No Public IP)            │
+                 │                             │
+                 │  ping 8.8.8.8              │
+                 └─────────────────────────────┘
+
 
 
 ---
@@ -83,19 +105,38 @@ To create a custom VPC with public and private subnets and deploy EC2 instances 
 ![Private EC2](Screenshot 2026-02-14 015452.png)
 
 📸 Screenshot:
-![Ping 8.8.8.8](
+![Ping 8.8.8.8](Screenshot 2026-02-14 013932.png)
 ---
 
 ## 💬 Interview Explanation
 
-"I designed a custom VPC with separate public and private subnets. The public subnet hosts a web server accessible via Internet Gateway, while the private subnet hosts an application server isolated from the internet. This demonstrates secure network design and understanding of AWS networking fundamentals."
+In this project, I created a custom VPC with public and private subnets to demonstrate secure network architecture.
+
+A Bastion Host was deployed in the public subnet to securely access the private EC2 instance. The private instance does not have a public IP, ensuring network isolation.
+
+To enable outbound internet access for the private instance, I configured a NAT Gateway and updated the route table accordingly. I verified connectivity by running `ping 8.8.8.8` from the private instance.
+
+This project demonstrates VPC creation, subnet isolation, route table configuration, Bastion Host setup, and NAT Gateway implementation.
+
 
 ---
 
+## 🔄 Traffic Flow Explanation
+
+Public Instance Access:
+Internet → Internet Gateway → Public Subnet → Bastion Host
+
+Private Instance Outbound Access:
+Private EC2 → Route Table (0.0.0.0/0) → NAT Gateway → Internet Gateway → Internet
+
+
 ## ✅ Key Learning
-- CIDR block planning
-- Subnet creation
-- Route table configuration
-- Internet Gateway setup
-- Network isolation in AWS
+- Custom VPC creation and CIDR planning
+- Public and private subnet architecture
+- Internet Gateway configuration
+- NAT Gateway setup for outbound internet access
+- Bastion Host for secure access control
+- Route table configuration and traffic flow understanding
+
+This implementation reflects a secure and production-style AWS networking setup.
 
