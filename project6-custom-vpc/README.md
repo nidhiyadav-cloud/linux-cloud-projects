@@ -48,7 +48,7 @@ To create a custom VPC with public and private subnets and deploy EC2 instances 
 - Private: 10.0.2.0/24
 
 📸 Screenshot:
-![Subnets](screenshots/2-subnets.png)
+![Subnets](Screenshot 2026-02-14 001004.png)
 
 ---
 
