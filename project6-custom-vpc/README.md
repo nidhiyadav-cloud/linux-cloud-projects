@@ -39,7 +39,7 @@ To create a custom VPC with public and private subnets and deploy EC2 instances 
 - CIDR: 10.0.0.0/16
 
 📸 Screenshot:
-![VPC](screenshots/1-vpc-created.png)
+![VPC](Screenshot 2026-02-14 014730.png)
 
 ---
 
