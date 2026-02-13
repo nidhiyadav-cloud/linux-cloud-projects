@@ -72,7 +72,7 @@ Automatically monitor EC2 CPU usage and send email alerts if CPU exceeds thresho
 ![SNS Topic](Screenshot 2026-02-13 220740.png)
 
 3. **Stress Test Running on EC2**
-![Stress Test]()
+![Stress Test](Screenshot 2026-02-13 215319.png)
 
 4. **Email Alert Received**
 ![Email Alert](Screenshot 2026-02-13 221333.png)
