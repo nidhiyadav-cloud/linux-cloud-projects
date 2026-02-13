@@ -15,7 +15,29 @@ Deploy a static website on an AWS EC2 instance using Amazon Linux and Nginx.
 3. Connected to the instance via SSH  
 4. Installed Nginx web server  
 5. Started and enabled Nginx service  
-6. Deployed a static website  
+6. Deployed a static website
+ 
+          ┌─────────────┐
+          │   Users     │
+          └─────┬───────┘
+                │ HTTP/HTTPS
+          ┌─────▼───────┐
+          │   EC2       │
+          │ Instance    │
+          │ (Nginx)     │
+          └─────┬───────┘
+        User Data Script (on boot):
+        ┌─────────────────────────────┐
+        │ - yum install nginx         │
+        │ - start & enable nginx      │
+        │ - echo "This is AWS and     │
+        │    this is my $(hostname)"  │
+        │    > index.html             │
+        └─────────────────────────────┘
+
+
+          
+
 
 ## 💻 Commands Used
 ```bash
