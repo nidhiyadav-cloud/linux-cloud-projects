@@ -16,7 +16,8 @@ Deploy a static website on an AWS EC2 instance using Amazon Linux and Nginx.
 4. Installed Nginx web server  
 5. Started and enabled Nginx service  
 6. Deployed a static website
- 
+
+ ## 🏗 Architecture
           ┌─────────────┐
           │   Users     │
           └─────┬───────┘
@@ -34,9 +35,6 @@ Deploy a static website on an AWS EC2 instance using Amazon Linux and Nginx.
         │    this is my $(hostname)"  │
         │    > index.html             │
         └─────────────────────────────┘
-
-
-          
 
 
 ## 💻 Commands Used
