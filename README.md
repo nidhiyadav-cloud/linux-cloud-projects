@@ -89,6 +89,20 @@ I focus on cloud networking, security best practices, and infrastructure monitor
 - Configured NAT Gateway for outbound internet connectivity
 - Verified traffic flow and network security
 
+### 7️⃣ VPC Peering Implementation
+📂 Path: /Project-7-VPC-Peering/
+
+- Implemented VPC Peering between two AWS VPCs.
+- Configured route tables and security groups for inter-VPC connectivity.
+- Enabled secure communication between resources in different VPCs.
+
+### 8️⃣ AWS Transit Gateway (Multi-VPC Connectivity)
+📂 Path: /project-8-AWS-Transit-Gateway/
+
+- Set up AWS Transit Gateway to connect multiple VPCs.
+- Configured attachments and route tables for centralized network management.
+- Enabled seamless communication across all connected VPCs.
+
 ---
 
 ## 🛠 AWS Services Hands-On
